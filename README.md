@@ -26,6 +26,55 @@ The project features a lightweight, single-layer architecture powered completely
 
 ---
 
+##  Pipeline
+
+
+```mermaid
+flowchart TD
+
+    A[EMAIL SPAM DETECTOR] --> B[DATA COLLECTION]
+
+    B --> C[EMAIL PARSING]
+
+    C --> D[DATA CLEANING]
+
+    D --> E[EDA]
+
+    E --> F[FEATURE ENGINEERING]
+
+    F --> G[NLP PREPROCESSING]
+
+    G --> H[TF-IDF PATH]
+    G --> I[DL PATH]
+
+    H --> J[ML MODELS]
+    J --> K[Naive Bayes]
+    J --> M[Random Forest]
+
+    I --> O[TOKENIZER]
+    O --> P[EMBEDDING]
+    P --> Q[ LSTM / GRU]
+
+    K --> R[EVALUATION]
+   
+    M --> R
+   
+
+    Q --> R
+
+    R --> S[MODEL COMPARISON]
+
+    S --> T[FINAL MODEL]
+
+    T --> U[MODEL SERIALIZATION]
+
+    U --> V[STREAMLIT APP]
+
+    V --> W[SPAM 🔴]
+    V --> X[HAM 🟢]
+
+```
+
 ## 🚀 Getting Started
 
 ### Prerequisites
